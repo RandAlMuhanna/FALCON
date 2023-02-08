@@ -16,9 +16,9 @@ struct CityNameView: View {
        
             VStack(alignment: .center, spacing: 10){
                 
-                Text(city)
-                    .font(.title)
-                    .foregroundColor(.black)
+//                Text(city)
+//                    .font(.title)
+//                    .foregroundColor(.black)
                 
               
             }

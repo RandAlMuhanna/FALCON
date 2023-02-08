@@ -12,14 +12,16 @@ struct CityView: View {
     
     var body: some View {
         VStack{
+            
             CityNameView(city: viewModel.city, date: viewModel.date)
             
             TodayWeatherView(viewModel: viewModel)
-            
+                
             DailyWeather(viewModel: viewModel)
-            
-        }
+        
+        }.foregroundColor(.white)
     }
+    
 }
 
 struct CityView_Previews: PreviewProvider {
@@ -27,3 +29,5 @@ struct CityView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

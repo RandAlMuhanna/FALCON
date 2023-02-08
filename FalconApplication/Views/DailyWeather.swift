@@ -8,37 +8,38 @@
 import SwiftUI
 
 struct DailyWeather: View {
+    
     @ObservedObject var viewModel : WeatherViewViewModel
+    
     var body: some View {
         ForEach(viewModel.weather.daily) { weather in
             
-            LazyVStack{
+            VStack(alignment: .center){
                 dailyCell(weather: weather)
             }
         }
     }
     
     private func dailyCell(weather : WeatherDaily) -> some View {
-        HStack(spacing : 30){
+        VStack(alignment: .center) {
             
-            Text(viewModel.getDayFor(timestamp: weather.dt))
-                .frame(width:100)
-           
+            HStack{
+                Spacer()
 
-//            viewModel.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.fill")
-            
-            LottieView(name: viewModel.getLottiAnimation(icon: viewModel.weatherIcons))
-                .frame(width: 30 , height: 30)
-            
-            Text("\(viewModel.getTempFor(temp: weather.temp.min)) | \(viewModel.getTempFor(temp: weather.temp.max))")
-                .frame(width:150)
-            
-        
-            
-           
+                Text(viewModel.getDayFor(timestamp: weather.dt))
+                Spacer()
+
+                LottieView(name: viewModel.getLottiAnimation(icon: viewModel.weatherIcons))
+                    .frame(width: 30 , height: 30)
+                Spacer()
+
+                Text("\(viewModel.getTempFor(temp: weather.temp.min)) | \(viewModel.getTempFor(temp: weather.temp.max))")
+                    
+                Spacer()
+
+            }.frame(maxWidth: .infinity , maxHeight: .infinity)
+                
         }
-//        .frame(maxWidth: .infinity , maxHeight: .infinity)
-        
     }
 }
 
@@ -47,3 +48,5 @@ struct DailyWeather_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

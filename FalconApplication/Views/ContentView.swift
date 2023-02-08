@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             
+            
             VStack{
                 HeaderView(viewModel: viewModel)
                 
@@ -22,8 +23,8 @@ struct ContentView: View {
             }
             
             
-        }
-        .padding()
+        } .fullBackground(imageName: "Background")
+     
         .preferredColorScheme(.light)
     }
 }
@@ -33,3 +34,17 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+public extension View {
+    func fullBackground(imageName: String) -> some View {
+       return background(
+                Image(imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+       )
+    }
+}
+
+
+
