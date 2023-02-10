@@ -11,6 +11,8 @@ import SwiftUI
 final class WeatherViewViewModel: ObservableObject {
     
     @Published var weather = WeatherResponse.empty()
+
+
     @Published var city : String = "Riyadh" {
         didSet {
             getLocation()
@@ -54,9 +56,12 @@ final class WeatherViewViewModel: ObservableObject {
         return getTempFor(temp: weather.current.temp)
     }
     
+   
+
     var condition: String {
+        
         if weather.current.weather.count > 0 {
-            return weather.current.weather[0].main
+            return weather.current.weather[0].description
         }
         return ""
     }

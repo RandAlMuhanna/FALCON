@@ -13,7 +13,6 @@ struct CityView: View {
     var body: some View {
         VStack{
             
-            CityNameView(city: viewModel.city, date: viewModel.date)
             
             TodayWeatherView(viewModel: viewModel)
                 

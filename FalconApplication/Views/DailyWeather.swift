@@ -12,15 +12,26 @@ struct DailyWeather: View {
     @ObservedObject var viewModel : WeatherViewViewModel
     
     var body: some View {
-        ForEach(viewModel.weather.daily) { weather in
+        
+        VStack(alignment: .center , spacing: 18){
             
-            VStack(alignment: .center){
-                dailyCell(weather: weather)
+            ForEach(viewModel.weather.daily) { weather in
+                
+                VStack(alignment: .center){
+                    dailyCell(weather: weather)
+                }
             }
-        }
+        }.padding()
+            .frame(width: 308 , height: 300)
+        .dailyWeatherBackground(imageName: "GlassBox")
+            .cornerRadius(20)
+            
+            .padding(.horizontal)
+            
     }
     
     private func dailyCell(weather : WeatherDaily) -> some View {
+        
         VStack(alignment: .center) {
             
             HStack{
@@ -33,11 +44,12 @@ struct DailyWeather: View {
                     .frame(width: 30 , height: 30)
                 Spacer()
 
-                Text("\(viewModel.getTempFor(temp: weather.temp.min)) | \(viewModel.getTempFor(temp: weather.temp.max))")
-                    
+                Text("\(viewModel.getTempFor(temp: weather.temp.min)) | \(viewModel.getTempFor(temp: weather.temp.max))°c")
+                    .foregroundColor(.white.opacity(0.6))
                 Spacer()
 
-            }.frame(maxWidth: .infinity , maxHeight: .infinity)
+            }
+            
                 
         }
     }
@@ -50,3 +62,13 @@ struct DailyWeather_Previews: PreviewProvider {
 }
 
 
+public extension View {
+    func dailyWeatherBackground(imageName: String) -> some View {
+       return background(
+                Image(imageName)
+                    .resizable()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
+       )
+    }
+}

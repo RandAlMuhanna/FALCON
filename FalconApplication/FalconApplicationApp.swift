@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct FalconApplicationApp: App {
     var body: some Scene {
+        
+        
         WindowGroup {
-            ContentView()
+            FalconMainPageView()
         }
     }
 }

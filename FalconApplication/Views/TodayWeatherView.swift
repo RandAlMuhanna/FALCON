@@ -8,10 +8,6 @@
 import SwiftUI
 
 
-//let boxGradient = LinearGradient(
-//    colors: [Color(red: 235 / 255, green: 255 / 255, blue: 255 / 255),Color(red: 18 / 255, green: 4 / 255, blue: 29 / 255)],
-//
-//    startPoint: .top, endPoint: .bottom)
 
 struct TodayWeatherView: View {
     
@@ -20,54 +16,59 @@ struct TodayWeatherView: View {
         
         VStack(alignment: .center , spacing:8){
             
-//            Text(viewModel.city)
-//                .font(.largeTitle)
-            Text(viewModel.city)
-                .font(.system(size: 36))
 
+            Text(viewModel.city)
+                .font(.system(size: 30))
+                .fontWeight(.regular)
+                .padding(.top,15)
+            
             Text("\(viewModel.temperature) °")
-                .font(.system(size: 80))
+                .font(.system(size: 60))
                 .fontWeight(.thin)
             
-            Text(viewModel.condition)
-                LottieView(name: viewModel.getLottiAnimation(icon: viewModel.weatherIcons))
-                    .frame(width: 100 , height: 100)
-                
-               
             
-            ScrollView(.horizontal) {
-                
-                HStack{
+            Text(viewModel.condition)
+                .foregroundColor(.white.opacity(0.6))
+            
+//                LottieView(name: viewModel.getLottiAnimation(icon: viewModel.weatherIcons))
+//                    .frame(width: 100 , height: 100)
+//
+               
+            VStack(alignment: .leading){
                     
-                    widgetView(image: "wind", title: "\(viewModel.windSpeed)mi/hr")
-                  
-                    widgetView(image: "drop", title: "\(viewModel.humidity)")
-                    
-                    widgetView(image: "umbrella", title: "\(viewModel.rainChance)")
-                   
-                }
-                    
+                    widgetView(image: "sunrise", title: "SUNRISE", value: "\(viewModel.windSpeed)mi/hr")
                   
             }
+            .padding(.horizontal)
             
         }.foregroundColor(.white)
 
         
     }
     
-    private func widgetView(image : String ,  title : String) -> some View {
-        VStack{
-            Image(systemName: image)
-                .padding()
-            
-            Text(title)
-        }.frame(width: 164 , height: 164)
-            .detailsBackground(imageName: "GlassBox")
-//            .background(boxGradient.opacity(50))
-            .cornerRadius(22)
+    private func widgetView(image : String ,  title : String , value : String) -> some View {
         
+        VStack(alignment: .leading){
+            HStack(spacing: 4){
+                Image(systemName: image)
+                  
+                Text(title)
+                
+            }.foregroundColor(.white.opacity(0.5))
+                .padding(.bottom)
+            
+            VStack{
+                Text(value)
+            }
+            
+        }.frame(width: 308 , height: 151)
+            .detailsBackground(imageName: "GlassBox")
+        //            .background(boxGradient.opacity(50))
+            .cornerRadius(20)
     }
 }
+
+
 
 struct TodayWeatherView_Previews: PreviewProvider {
     static var previews: some View {
