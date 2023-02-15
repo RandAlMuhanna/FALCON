@@ -25,7 +25,6 @@ struct DailyWeather: View {
             .frame(width: 308 , height: 300)
         .dailyWeatherBackground(imageName: "GlassBox")
             .cornerRadius(20)
-            
             .padding(.horizontal)
             
     }
@@ -34,19 +33,21 @@ struct DailyWeather: View {
         
         VStack(alignment: .center) {
             
-            HStack{
-                Spacer()
+            HStack(spacing:64){
+              
 
                 Text(viewModel.getDayFor(timestamp: weather.dt))
-                Spacer()
+                
 
-                LottieView(name: viewModel.getLottiAnimation(icon: viewModel.weatherIcons))
-                    .frame(width: 30 , height: 30)
-                Spacer()
+                VStack (alignment: .center){
+                    LottieView(name: viewModel.getLottiAnimation(icon: viewModel.weatherIcons))
+                        .frame(width: 33 , height: 33)
+                }
+              
 
-                Text("\(viewModel.getTempFor(temp: weather.temp.min)) | \(viewModel.getTempFor(temp: weather.temp.max))°c")
+                Text("\(viewModel.getTempFor(temp: weather.temp.min)) | \(viewModel.getTempFor(temp: weather.temp.max))°")
                     .foregroundColor(.white.opacity(0.6))
-                Spacer()
+              
 
             }
             
@@ -57,7 +58,7 @@ struct DailyWeather: View {
 
 struct DailyWeather_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        FalconMainPageView()
     }
 }
 

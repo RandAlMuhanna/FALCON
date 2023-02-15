@@ -41,7 +41,7 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        FalconMainPageView()
     }
 }
 

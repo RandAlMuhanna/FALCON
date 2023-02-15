@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var viewModel = WeatherViewViewModel()
+//    @ObservedObject var viewModel = WeatherViewViewModel()
     
     var body: some View {
       
@@ -19,16 +19,17 @@ struct ContentView: View {
                 
                // HeaderView(viewModel: viewModel)
                 
-                ScrollView(showsIndicators: false){
-                    CityView(viewModel: viewModel)
-                }
-           }.frame(width: 340 , height: 659)
-            .background(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8))
-            .cornerRadius(20)
-            
-        // .fullBackground(imageName: "BackgroundTwo")
-     
-        .preferredColorScheme(.light)
+//                ScrollView(showsIndicators: false){
+//                    CityView(viewModel: viewModel)
+//                }
+           }
+//           .frame(width: 340 , height: 659)
+//            .background(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8))
+//            .cornerRadius(20)
+//            
+//        // .fullBackground(imageName: "BackgroundTwo")
+//     
+//        .preferredColorScheme(.light)
     }
 }
 

@@ -7,7 +7,9 @@
 
 import Foundation
 
-final class NetWorkManager<T : Codable>{
+ class NetWorkManager<T : Codable>{
+    
+    
     static func fetch(for url: URL , completion : @escaping (Result<T , NetworkError>) -> Void) {
         URLSession.shared.dataTask(with: url) { (data , response , error) in
             
@@ -35,7 +37,7 @@ final class NetWorkManager<T : Codable>{
             }
             
         }.resume()
-        
+
         
     }
 }

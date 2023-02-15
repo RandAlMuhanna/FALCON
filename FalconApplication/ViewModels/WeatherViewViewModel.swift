@@ -11,7 +11,7 @@ import SwiftUI
 final class WeatherViewViewModel: ObservableObject {
     
     @Published var weather = WeatherResponse.empty()
-
+    
 
     @Published var city : String = "Riyadh" {
         didSet {
@@ -53,10 +53,11 @@ final class WeatherViewViewModel: ObservableObject {
     }
     
     var temperature : String {
-        return getTempFor(temp: weather.current.temp)
+//        return getTempFor(temp: weather.current.temp)
+        return String(weather.current.temp.convertToInt)
     }
     
-   
+
 
     var condition: String {
         
@@ -75,6 +76,13 @@ final class WeatherViewViewModel: ObservableObject {
         return String(format: "%d%%", weather.current.humidity)
         
     }
+    
+    var feelsLike: String {
+        return String(weather.current.feels_like.convertToInt)
+        
+    }
+    
+    
     var rainChance: String {
         return String(format: "%0.0f", weather.current.dew_point)
         
@@ -85,7 +93,7 @@ final class WeatherViewViewModel: ObservableObject {
     }
     
     func getTempFor(temp : Double) -> String {
-        return String(format: "%0.1f", temp)
+        return String(temp.convertToInt)
     }
     
     func getDayFor(timestamp : Int) -> String {
@@ -116,13 +124,17 @@ final class WeatherViewViewModel: ObservableObject {
     }
     
     private func getWeatherInternal(city : String , for urlString: String){
+        // Loading
         NetWorkManager<WeatherResponse>.fetch(for: URL(string: urlString)!) { (result) in
             switch result {
             case .success(let response):
+                // Loading completed
                 DispatchQueue.main.async {
+                    
                     self.weather = response
                 }
             case .failure(let err) :
+                // Loading failed
                 print(err)
             }
             

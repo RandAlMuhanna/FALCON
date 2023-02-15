@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-
-
 struct TodayWeatherView: View {
     
     @ObservedObject var viewModel : WeatherViewViewModel
+    
     var body: some View {
         
         VStack(alignment: .center , spacing:8){
@@ -22,23 +21,32 @@ struct TodayWeatherView: View {
                 .fontWeight(.regular)
                 .padding(.top,15)
             
-            Text("\(viewModel.temperature) °")
+            Text("\(viewModel.temperature)°")
                 .font(.system(size: 60))
                 .fontWeight(.thin)
             
             
             Text(viewModel.condition)
                 .foregroundColor(.white.opacity(0.6))
-            
-//                LottieView(name: viewModel.getLottiAnimation(icon: viewModel.weatherIcons))
-//                    .frame(width: 100 , height: 100)
-//
+
                
-            VStack(alignment: .leading){
-                    
-                    widgetView(image: "sunrise", title: "SUNRISE", value: "\(viewModel.windSpeed)mi/hr")
-                  
+            HStack{
+
+                    widgetView(image: "wind", title: "Wind", value: "\(viewModel.windSpeed)m/s")
+//                Spacer()
+                widgetView(image: "cloud.rain", title: "Rain", value: "\(viewModel.rainChance)%")
+//                Spacer()
+
+                widgetView(image: "humidity", title: "Humidity", value: "\(viewModel.humidity)")
+                widgetView(image: "thermometer.low", title: "Feels Like", value: "\(viewModel.feelsLike)°")
+
+
             }
+            .frame(width: 308 , height: 151)
+           
+                .detailsBackground(imageName: "GlassBox")
+            //            .background(boxGradient.opacity(50))
+                .cornerRadius(20)
             .padding(.horizontal)
             
         }.foregroundColor(.white)
@@ -48,23 +56,42 @@ struct TodayWeatherView: View {
     
     private func widgetView(image : String ,  title : String , value : String) -> some View {
         
-        VStack(alignment: .leading){
-            HStack(spacing: 4){
-                Image(systemName: image)
+//        VStack(alignment: .center , spacing: 8){
+//
+//            VStack(spacing: 8){
+//                Image(systemName: image)
+//
+//
+//                Text(title)
+//                    .font(.caption)
+//
+//            }
+//            .foregroundColor(.white.opacity(0.5))
+//
+//
+//            VStack{
+//                Text(value)
+//
+//            }
+//
+//        }
+        RoundedRectangle(cornerRadius: 10, style: .continuous)
+            .fill(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8).opacity(0.5))
+            .overlay {
+                VStack(spacing:8){
+                    
+                    VStack(spacing:4){
+                        Image(systemName: image)
+                        Text(title)
+                    }.font(.caption2)
+                        .foregroundColor(.white.opacity(0.6))
                   
-                Text(title)
-                
-            }.foregroundColor(.white.opacity(0.5))
-                .padding(.bottom)
-            
-            VStack{
-                Text(value)
-            }
-            
-        }.frame(width: 308 , height: 151)
-            .detailsBackground(imageName: "GlassBox")
-        //            .background(boxGradient.opacity(50))
-            .cornerRadius(20)
+                    Text(value)
+                        .font(.caption)
+                        .bold()
+                }
+
+            }.frame(width: 60, height: 120)
     }
 }
 
@@ -72,7 +99,7 @@ struct TodayWeatherView: View {
 
 struct TodayWeatherView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        FalconMainPageView()
     }
 }
 
