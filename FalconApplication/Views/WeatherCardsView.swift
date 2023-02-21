@@ -17,58 +17,64 @@ struct WeatherCardsView: View {
     var body: some View {
         
         
-        ZStack {
-            
-            if !tappedCard {
+        VStack(spacing:25) {
+            HeaderView(viewModel: viewModel)
+
                 
-                VStack(spacing:20){
+            VStack {
+
+                if !tappedCard {
+
+                    VStack(spacing:32){
+
+                        VStack(spacing:10){
+
+                            CityNameView(city: viewModel.city)
+                            
+                            Text("\(viewModel.temperature)°")
+                                .font(.system(size: 60))
+                                .fontWeight(.thin)
+                                .foregroundColor(.white)
+                            
+                        }
+                       
+                     
+                        VStack(spacing:10){
+                            Text(viewModel.condition)
+                                .foregroundColor(.white.opacity(0.6))
+                            
+                            
+                            LottieView(name: viewModel.getLottiAnimation(icon: viewModel.weatherIcons))
+                                .frame(width: 135 , height: 135)
+                            
+                        }
+                       
+
+                    }.frame(width: 312.38 , height: 424.99)
+                } else{
                     
-                   
-                    Text(viewModel.city)
-                        .font(.system(size: 36))
-                        .fontWeight(.regular)
-                        .foregroundColor(.white)
-                    
-                    Text("\(viewModel.temperature)°")
-                        .font(.system(size: 60))
-                        .fontWeight(.thin)
-                        .foregroundColor(.white)
-                    
-                    
-                    Text(viewModel.condition)
-                        .foregroundColor(.white.opacity(0.6))
-                    
-                    
-                    LottieView(name: viewModel.getLottiAnimation(icon: viewModel.weatherIcons))
-                        .frame(width: 100 , height: 100)
-                    
-                    
-                    Text("AL Murba’aniah")
-                        .font(.system(size: 24))
-                        .foregroundColor(.white)
-                        .bold()
-                    
-                }.frame(width: 312.38 , height: 424.99)
-                    
-                
-            } else{
-                
-                CityView(viewModel: viewModel)
+                    CityView(viewModel: viewModel)
+                       
+                }
+
             }
             
+
+            .background(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8))
+            .cornerRadius(20)
+        
+            .onTapGesture {
+                withAnimation {
+                    tappedCard.toggle()
+                }
         }
-        .background(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8))
-        .cornerRadius(20)
-        .ignoresSafeArea()
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .modifier(BlurBackground(showBlur: tappedCard))
-        .onTapGesture {
-            withAnimation {
-                tappedCard.toggle()
-            }
         }
+           .frame(maxWidth: .infinity, maxHeight: .infinity)
+         .modifier(BlurBackground(showBlur: tappedCard))
+        
+
     }
-    
+
  
 }
 
@@ -86,7 +92,7 @@ struct BlurBackground: ViewModifier {
     func body(content: Content) -> some View {
         if showBlur {
             content
-                .background(.ultraThinMaterial.opacity(0.7))
+                .background(.ultraThinMaterial)
         } else {
             content
         }

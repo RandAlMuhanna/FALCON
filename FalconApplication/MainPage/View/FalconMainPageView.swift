@@ -12,30 +12,68 @@ struct FalconMainPageView: View {
     
     @State private var selectedItem: FalconScrollerViewModel = .weather
 
+    @ObservedObject var viewModel = WeatherViewViewModel()
+    
     @Namespace var animation
+    
+
     
     var body: some View {
         
-        ZStack {
 
-            VStack {
+        // GeometryReader for avoiding keyboeard from push my view
+        GeometryReader { geo in
+            ZStack {
 
-                segmentView
-                
-                Spacer()
-               
-            }
-            
-            if selectedItem == .weather {
-                WeatherCardsView(viewModel: WeatherViewViewModel())
-                    .frame(maxHeight: .infinity)
-            } else {
-                DiscoverCardsView(model: CardsBackModel.Riyadh)
-                    .frame(maxHeight: .infinity)
-            }
-        }
-        .fullBackground(imageName: "Background")
+                    VStack {
+
+                        segmentView
+                        
+                        Text("AL Shubt")
+                            .font(.system(size: 18))
+                            .foregroundColor(.white)
+                            .bold()
+                           .padding(.top)
+                        
+                        Text(viewModel.date)
+                            .font(.system(size: 16))
+                            .fontWeight(.thin)
+                            .foregroundColor(.white.opacity(0.6))
+
+                        Spacer()
+
+                       
+                    }
+                    
+                    VStack{
+
+                        if selectedItem == .weather {
+                            WeatherCardsView(viewModel: WeatherViewViewModel())
+                                .frame(maxHeight: .infinity)
+                            
+                        } else {
+                            DiscoverCardsView(model: CardsBackModel.Shubt)
+                                .frame(maxHeight: .infinity)
+                        }
+                           
+                    }
+
+                 
+                 
+
+                }
+            .fullBackground(imageName: "MainBackground")
+        }   .ignoresSafeArea(.keyboard, edges: .bottom)
+//            .toolbar{
+//                ToolbarItemGroup(placement: .keyboard){
+//                    Button("Done"){
+//                        doneButton = false
+//                    }
+//                }
+//            }
+
     }
+
 }
 
 
@@ -53,57 +91,52 @@ extension FalconMainPageView {
  
     var segmentView : some View {
         
-        HStack{
-            
-            ForEach(FalconScrollerViewModel.allCases , id: \.rawValue) { item in
-                VStack {
-                    Text(item.type)
-                    
-                        .font(.subheadline)
-                        .fontWeight(selectedItem == item ? .semibold : .regular)
-                        .foregroundColor(selectedItem == item ? .white: .gray)
-                    
-                    if selectedItem == item {
-                        Capsule()
-                            .frame(height: 2)
-                            .foregroundColor(.white)
+        VStack {
+
+            HStack{
+                
+                ForEach(FalconScrollerViewModel.allCases , id: \.rawValue) { item in
+                    VStack {
+                        Text(item.type)
                         
-                        // Custom animation effect
-                            .matchedGeometryEffect(id: "Filter", in: animation)
-                    } else {
-                        Capsule()
-                            .foregroundColor(.clear)
-                            .frame(height: 2)
+                            .font(.subheadline)
+                            .fontWeight(selectedItem == item ? .semibold : .regular)
+                            .foregroundColor(selectedItem == item ? .white: .gray)
+                        
+                        if selectedItem == item {
+                            Capsule()
+                                .frame(height: 2)
+                                .foregroundColor(.white)
+                            
+                            // Custom animation effect
+                                .matchedGeometryEffect(id: "Filter", in: animation)
+                        } else {
+                            Capsule()
+                                .foregroundColor(.clear)
+                                .frame(height: 2)
+                            
+                        }
                         
                     }
-                    
-                }
-                .onTapGesture {
-                    withAnimation(.easeInOut) {
-                        self.selectedItem = item
+                    .onTapGesture {
+                        withAnimation(.easeInOut) {
+                            self.selectedItem = item
+                        }
                     }
                 }
+                
+                
             }
             
-            
-        }
-        .frame(height: 60)
+            .frame(height: 60)
         .padding(.horizontal, 60)
-        
-        // To remove extra space on header
-//        VStack(spacing:32){
-//            .padding()
-//                .padding(.horizontal,50)
-//          //  .overlay(Divider().offset(x:0 , y: 17))
-//
-//
-//
-//
-//        }
-    }
-    
-}
 
+        }
+
+
+    }
+
+}
 
 public extension View {
     func fullBackground(imageName: String) -> some View {

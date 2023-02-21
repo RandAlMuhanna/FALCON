@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct CityView: View {
+    
     @ObservedObject var viewModel : WeatherViewViewModel
     
     var body: some View {
         
         VStack{
-
+       
             ScrollView(showsIndicators: false) {
+                
                 
                 TodayWeatherView(viewModel: viewModel)
                 

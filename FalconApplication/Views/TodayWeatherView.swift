@@ -10,17 +10,16 @@ import SwiftUI
 struct TodayWeatherView: View {
     
     @ObservedObject var viewModel : WeatherViewViewModel
+
     
     var body: some View {
         
         VStack(alignment: .center , spacing:8){
             
 
-            Text(viewModel.city)
-                .font(.system(size: 30))
-                .fontWeight(.regular)
-                .padding(.top,15)
-            
+            CityNameView(city: viewModel.city)
+                .padding(.top)
+
             Text("\(viewModel.temperature)°")
                 .font(.system(size: 60))
                 .fontWeight(.thin)
@@ -56,25 +55,7 @@ struct TodayWeatherView: View {
     
     private func widgetView(image : String ,  title : String , value : String) -> some View {
         
-//        VStack(alignment: .center , spacing: 8){
-//
-//            VStack(spacing: 8){
-//                Image(systemName: image)
-//
-//
-//                Text(title)
-//                    .font(.caption)
-//
-//            }
-//            .foregroundColor(.white.opacity(0.5))
-//
-//
-//            VStack{
-//                Text(value)
-//
-//            }
-//
-//        }
+
         RoundedRectangle(cornerRadius: 10, style: .continuous)
             .fill(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8).opacity(0.5))
             .overlay {

@@ -8,10 +8,11 @@
 import CoreLocation
 import SwiftUI
 
-final class WeatherViewViewModel: ObservableObject {
+final class WeatherViewViewModel: ObservableObject{
+    
+ 
     
     @Published var weather = WeatherResponse.empty()
-    
 
     @Published var city : String = "Riyadh" {
         didSet {
@@ -38,8 +39,11 @@ final class WeatherViewViewModel: ObservableObject {
     }()
     
     init() {
+
         getLocation()
     }
+    
+
     
     var date : String {
         return dateFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(weather.current.dt)))
@@ -57,8 +61,9 @@ final class WeatherViewViewModel: ObservableObject {
         return String(weather.current.temp.convertToInt)
     }
     
-
-
+    
+ 
+    
     var condition: String {
         
         if weather.current.weather.count > 0 {
@@ -105,23 +110,27 @@ final class WeatherViewViewModel: ObservableObject {
         CLGeocoder().geocodeAddressString(city) { (placemarks , error) in
             if let places = placemarks, let place = places.first{
                 self.getWeather(coord: place.location?.coordinate)
+                
+                   
             }
-            
         }
     }
     
+  
     
+    //Get address uding lon and lat
     private func getWeather(coord : CLLocationCoordinate2D?) {
         if let coord = coord {
             let urlString = API.getURLFor(lat: coord.latitude, lon: coord.longitude)
             getWeatherInternal(city: city, for: urlString)
         } else{
-            let urlString = API.getURLFor(lat: 23.885942, lon: 45.079163)
+            let urlString = API.getURLFor(lat: 25.249359, lon: 45.261669)
             getWeatherInternal(city: city, for: urlString)
         }
         
-        
+          
     }
+    
     
     private func getWeatherInternal(city : String , for urlString: String){
         // Loading
@@ -140,6 +149,7 @@ final class WeatherViewViewModel: ObservableObject {
             
         }
     }
+    
     
     func getLottiAnimation(icon : String) -> String {
         

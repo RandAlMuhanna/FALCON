@@ -10,13 +10,13 @@ import Foundation
 enum FalconScrollerViewModel :Int , CaseIterable{
     
     case weather
-    case discover
+    case seasons
     
     
     var type : String{
         switch self {
         case .weather: return "Weather"
-        case .discover: return "Discover"
+        case .seasons: return "Seasons"
 
             
         }

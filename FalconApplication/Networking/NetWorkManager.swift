@@ -7,7 +7,7 @@
 
 import Foundation
 
- class NetWorkManager<T : Codable>{
+ final class NetWorkManager<T : Codable>{
     
     
     static func fetch(for url: URL , completion : @escaping (Result<T , NetworkError>) -> Void) {

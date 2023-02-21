@@ -11,73 +11,66 @@ import Foundation
 
 enum CardsBackModel: Int , CaseIterable {
     
-    case Qassim
-    case Taif
-    case Riyadh
-    case Umluj
-    case Tabuk
-    case Asir
-    case Shaqra
+    case Murbaaniah
+    case Shubt
+    case Aqareb
+    case Hamemeen
+    case Theraaien
 
-    var cityImage: String {
+
+    
+    
+    var seasonName: String {
         
         switch self {
-        case .Qassim:   return "AlQassim"
-        case .Taif : return "Taif"
-        case .Riyadh:   return "Riyadh"
-        case .Umluj:  return "Umluj"
-        case .Tabuk:   return "Tabuk"
-        case .Asir:    return "Asir"
-        case .Shaqra:   return "Shaqra"
+        case .Murbaaniah: return "AL Murba’aniah"
+        case .Shubt : return "AL Shubt"
+        case .Aqareb: return "AL Aqareb"
+        case .Hamemeen: return "AL Hamemeen"
+        case .Theraaien: return "AL Thera’aien"
 
         }
     }
     
-    
-    var cityName: String {
-        
-        switch self {
-        case .Qassim: return "Qassim"
-        case .Taif : return "Taif"
-        case .Riyadh: return "Riyadh"
-        case .Umluj: return "Umluj"
-        case .Tabuk: return "Tabuk"
-        case .Asir: return "Asir"
-        case .Shaqra: return "Shaqra"
 
-        }
-    }
-    
-    
-    var cityFestival: String {
+    var seasonDuration: String {
             switch self {
-            case .Qassim: return "Qassim dates festival"
-            case .Taif : return "Taif rose festival"
-            case .Riyadh: return "Edge of the world"
-            case .Umluj: return "Saudi Maldives"
-            case .Tabuk: return " Jabal Al Lawz "
-            case .Asir: return "AL Soudah"
-            case .Shaqra: return "Pepper festival"
+            case .Murbaaniah: return "(Starts on December 7th and ends on January 14th)"
+            case .Shubt : return "(starts on January 15th and ends on February 9th)"
+            case .Aqareb: return "(starts on February 10th and ends on March 20th)"
+            case .Hamemeen: return "(starts on March 21st and ends on April 15th)"
+            case .Theraaien: return "(starts on April 16th and ends on May 11th)"
 
 
             }
     }
     
- 
-    var cityDetails: String {
+    var seasonTemperature: String {
             switch self {
-            case .Qassim: return "The dates season begins in mid-August/August each year, with a harvest celebration that lasts 36 days and includes more than 45 products of various types of dates."
-            case .Taif : return "Taif's rose is celebrated each year during the festival, which takes place in March and April at King Faisal Park in Qadeera."
-
-            case .Riyadh: return "Mountain climbing and hiking enthusiasts will love Edge of the World. Discover the breathtaking off-cliff scenery."
-            case .Umluj: return "Located in Tabuk's northwestern region. It is well-known for its tranquil landscape, white sandy beaches, pristine clear turquoise waters, and uninhabited islands."
-            case .Tabuk: return "Jabal Al Lawz, is one such beautiful mountain located in Tabuk Province. It has the highest elevation points in the region, offering mesmerizing views of the nearby area from the summit."
-            case .Asir: return " Al Soudah is a perfect blend of fascinating history, rich culture, and breathtaking natural beauty."
-            case .Shaqra: return "Shaqra"
-
+            case .Murbaaniah: return "• At the beginning of Almurbaaniah It gets cold."
+            case .Shubt : return "• It gets colder and fog forms in the morning."
+            case .Aqareb: return "• End of winter,winds are strong and the rains are frequent."
+            case .Hamemeen: return "• It's getting warmer, the trees are greener, and insects are out from their lairs."
+            case .Theraaien: return "• The weather is mild at night and tends to be hot at noon."
+           
 
             }
     }
+
+    var seasonGriculture: String {
+            switch self {
+            case .Murbaaniah: return "• Wheat and barley are grown in the north of the kingdom."
+            case .Shubt : return "• Nothing is planted in it due to its coldness."
+            case .Aqareb: return "• The first three days of it are part of the (seed of the six) to plant all trees and plants."
+            case .Hamemeen: return "• Rice is grown and wheat is harvested."
+            case .Theraaien: return "• It is advisable to pollinate palm trees."
+           
+
+            }
+    }
+    
+    
+
     
 }
 

@@ -10,33 +10,55 @@ import SwiftUI
 struct HeaderView: View {
     
     @ObservedObject var viewModel : WeatherViewViewModel
-    @State private var SearchFor = "Riyadh"
+    
+    @State var searchFor = ""
+    
+    @FocusState private var nameIsFocused: Bool
+
+
     
     var body: some View {
         
+       
         VStack {
             HStack{
+                Image(systemName: "magnifyingglass")
+                .foregroundColor(.white.opacity(0.6))
+               
                 
-                TextField("" , text: $SearchFor)
-                    .padding()
+                TextField("Search for a city", text: $searchFor)
+                    .keyboardType(.alphabet)
                 
-                Button{
-                    viewModel.city = SearchFor
-                } label: {
-                   
-                        Image(systemName: "location.fill")
-                        .foregroundColor(.white)
-                }
-                .frame(width: 25 , height: 25)
-                .padding()
+                // Take action directly when user click ENTER
+                    .onSubmit {
+                               guard searchFor.isEmpty == false else { return }
+                        viewModel.city = searchFor
+                           }
+                    .focused($nameIsFocused)
+                
             }
-        } .background(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8).opacity(0.1))
-            .frame(height: 40)
+            // Button to delete the text from TextField
+            .onAppear {
+                UITextField.appearance().clearButtonMode = .whileEditing
+            }
+          
+        }
+        .padding()
+        
+         .background(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8).opacity(0.1))
+            .frame(width: 312.38 ,height: 40)
             .cornerRadius(22)
             .padding(.horizontal)
-            .padding(.top,35)
         
+                    .toolbar{
+                        ToolbarItemGroup(placement: .keyboard){
+                            Button("Done"){
+                                nameIsFocused = false
+                            }
+                        }
+                    }
     }
+    
 }
 
 struct HeaderView_Previews: PreviewProvider {
@@ -44,5 +66,6 @@ struct HeaderView_Previews: PreviewProvider {
         FalconMainPageView()
     }
 }
+
 
 

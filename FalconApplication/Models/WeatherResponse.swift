@@ -13,9 +13,13 @@ struct WeatherResponse : Codable {
     var hourly : [Weather]
     var daily : [WeatherDaily]
     
+  
     static func empty() -> WeatherResponse {
-        
-        return WeatherResponse(current: Weather(), hourly: [Weather](repeating: Weather(), count: 23), daily:  [WeatherDaily](repeating: WeatherDaily(), count: 1))
+        return WeatherResponse(current: Weather(), hourly: [Weather](), daily:  [WeatherDaily]())
+
+
     }
-    
 }
+
+
+

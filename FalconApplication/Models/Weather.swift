@@ -31,7 +31,7 @@ struct Weather : Codable , Identifiable {
         case wind_speed
         case wind_deg
         case weather
-        
+       
     }
     init() {
         dt = 0

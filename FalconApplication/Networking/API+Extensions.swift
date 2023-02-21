@@ -17,3 +17,5 @@ extension API {
     }
 }
 
+
+//https://api.openweathermap.org/data/2.5/onecall?lat=24.7136&lon=46.6753&exclude=minutely&appid=8dce10ec3e4d33171bfb68457988f685

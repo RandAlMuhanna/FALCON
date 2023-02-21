@@ -8,7 +8,6 @@
 import SwiftUI
 
 
-
 struct DiscoverCardsView: View {
     
     var model: CardsBackModel
@@ -41,7 +40,7 @@ struct DiscoverCardsView: View {
     
     struct DiscoverCardsView_Previews: PreviewProvider {
         static var previews: some View {
-            DiscoverCardsView(model: .Riyadh)
+            DiscoverCardsView(model: .Shubt)
         }
     }
     
@@ -56,42 +55,45 @@ struct DiscoverCardsView: View {
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
                         .fill(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8))
                         .overlay {
-                            VStack(alignment: .center) {
-//
-//                                Text(item.cityName)
-//                                    .font(.title)
-//
-                                Text(item.cityFestival)
-                                    .font(.title)
-                                Text(item.cityDetails)
-                                    .font(.caption)
+                            VStack(spacing:16) {
+                                VStack(alignment: .center){
+                                    Text(item.seasonName)
+                                        .font(.title)
+
+                                    Text(item.seasonDuration)
+                                        .font(.caption)
+                                }.multilineTextAlignment(.center)
+                                
+                                VStack{
+                                    Text(item.seasonTemperature)
+                                    Text(item.seasonGriculture)
+                                    
+                                }.font(.caption)
+                                        .multilineTextAlignment(.leading)
+                                
+                                    
                                 
                             }.foregroundColor(.white)
-                                .multilineTextAlignment(.center)
                         }
                         .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
-                        
-                } else {
-                    Image(item.cityImage)
-                        .resizable()
                         .frame(width: 312.38 , height: 424.99)
-                        .scaledToFit()
-                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                } else {
+                    Text("")
+                        .frame(width: 312.38 , height: 424.99)
                     
-                    Text(item.cityName)
                         .foregroundColor(.white)
                         .font(.system(size: 30, weight: .bold, design: .rounded))
-                        .padding(15)
                         .background(Color(red: 0.596078431372549, green: 0.5176470588235295, blue: 0.7372549019607844)).opacity(0.8)
                         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                        .frame(maxHeight: .infinity, alignment: .top)
-                        .padding(.top, 25)
+                        //.frame(maxHeight: .infinity, alignment: .top)
+                        .padding()
                 }
                 
                 
                 
             }
-            .frame(width: 312.38 , height: 424.99)
+                              
+            
             .rotation3DEffect(.degrees(isTapped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
             .onTapGesture {
                 withAnimation {
