@@ -27,7 +27,7 @@ struct CityView: View {
         .frame(width: 340 , height: 659)
 //            .background(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8))
 //            .cornerRadius(20)
-            .preferredColorScheme(.light)
+//            .preferredColorScheme(.light)
     }
     
 }

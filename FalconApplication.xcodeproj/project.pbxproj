@@ -13,13 +13,15 @@
 		A469E82C299A262600A168BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A469E82B299A262600A168BC /* GoogleService-Info.plist */; };
 		A469E82E299A983500A168BC /* Double+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469E82D299A983500A168BC /* Double+Extenstion.swift */; };
 		A469E830299B848F00A168BC /* CardsBackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469E82F299B848F00A168BC /* CardsBackModel.swift */; };
-		A4D06DAB29936123008B4328 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D06DAA29936123008B4328 /* HeaderView.swift */; };
+		A4D06DAB29936123008B4328 /* citiesSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D06DAA29936123008B4328 /* citiesSearch.swift */; };
 		A4D06DAD29936347008B4328 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D06DAC29936347008B4328 /* CityView.swift */; };
 		A4D06DB629952C56008B4328 /* FalconScrollerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D06DB529952C56008B4328 /* FalconScrollerViewModel.swift */; };
 		A4D06DB829952CDC008B4328 /* FalconMainPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D06DB729952CDC008B4328 /* FalconMainPageView.swift */; };
 		A4D06DBA2995713D008B4328 /* WeatherCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D06DB92995713D008B4328 /* WeatherCardsView.swift */; };
 		A4DAECC629A1DD2900B2C93D /* CityNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAECC529A1DD2900B2C93D /* CityNameView.swift */; };
 		A4DAECCD29A1F86E00B2C93D /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAECCC29A1F86E00B2C93D /* BigButton.swift */; };
+		A4DAECDC29A95DB000B2C93D /* seasonsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAECDB29A95DB000B2C93D /* seasonsSearch.swift */; };
+		A4DAECDE29AB085500B2C93D /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAECDD29AB085500B2C93D /* SplashScreenView.swift */; };
 		A4DD56AA29922E900028F889 /* FalconApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD56A929922E900028F889 /* FalconApplicationApp.swift */; };
 		A4DD56AC29922E900028F889 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD56AB29922E900028F889 /* ContentView.swift */; };
 		A4DD56AE29922E920028F889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4DD56AD29922E920028F889 /* Assets.xcassets */; };
@@ -64,13 +66,15 @@
 		A469E82B299A262600A168BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FalconAuthKey+Google/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A469E82D299A983500A168BC /* Double+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extenstion.swift"; sourceTree = "<group>"; };
 		A469E82F299B848F00A168BC /* CardsBackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsBackModel.swift; sourceTree = "<group>"; };
-		A4D06DAA29936123008B4328 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		A4D06DAA29936123008B4328 /* citiesSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = citiesSearch.swift; sourceTree = "<group>"; };
 		A4D06DAC29936347008B4328 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		A4D06DB529952C56008B4328 /* FalconScrollerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconScrollerViewModel.swift; sourceTree = "<group>"; };
 		A4D06DB729952CDC008B4328 /* FalconMainPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconMainPageView.swift; sourceTree = "<group>"; };
 		A4D06DB92995713D008B4328 /* WeatherCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCardsView.swift; sourceTree = "<group>"; };
 		A4DAECC529A1DD2900B2C93D /* CityNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityNameView.swift; sourceTree = "<group>"; };
 		A4DAECCC29A1F86E00B2C93D /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
+		A4DAECDB29A95DB000B2C93D /* seasonsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seasonsSearch.swift; sourceTree = "<group>"; };
+		A4DAECDD29AB085500B2C93D /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		A4DD56A629922E900028F889 /* FalconApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FalconApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4DD56A929922E900028F889 /* FalconApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconApplicationApp.swift; sourceTree = "<group>"; };
 		A4DD56AB29922E900028F889 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -246,11 +250,13 @@
 				A4DD56D029925AEA0028F889 /* LottieView.swift */,
 				A4DD56FB299299310028F889 /* TodayWeatherView.swift */,
 				A4DD56FD2992A2100028F889 /* DailyWeather.swift */,
-				A4D06DAA29936123008B4328 /* HeaderView.swift */,
+				A4D06DAA29936123008B4328 /* citiesSearch.swift */,
 				A4D06DAC29936347008B4328 /* CityView.swift */,
 				A4D06DB92995713D008B4328 /* WeatherCardsView.swift */,
 				A469E8202999734600A168BC /* DiscoverCardsView.swift */,
 				A4DAECC529A1DD2900B2C93D /* CityNameView.swift */,
+				A4DAECDB29A95DB000B2C93D /* seasonsSearch.swift */,
+				A4DAECDD29AB085500B2C93D /* SplashScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A469E830299B848F00A168BC /* CardsBackModel.swift in Sources */,
+				A4DAECDE29AB085500B2C93D /* SplashScreenView.swift in Sources */,
 				A4DD56CC299239500028F889 /* WeatherViewViewModel.swift in Sources */,
 				A4DD56C0299230EA0028F889 /* NetWorkManager.swift in Sources */,
 				A4DD56C2299234EC0028F889 /* WeatherResponse.swift in Sources */,
@@ -405,11 +412,12 @@
 				A4DAECC629A1DD2900B2C93D /* CityNameView.swift in Sources */,
 				A4DD56AA29922E900028F889 /* FalconApplicationApp.swift in Sources */,
 				A4DD56FC299299310028F889 /* TodayWeatherView.swift in Sources */,
+				A4DAECDC29A95DB000B2C93D /* seasonsSearch.swift in Sources */,
 				A4DD56CA299235420028F889 /* Temperature.swift in Sources */,
 				A4D06DB629952C56008B4328 /* FalconScrollerViewModel.swift in Sources */,
 				A4DD56C4299234F20028F889 /* Weather.swift in Sources */,
 				A4DD56D129925AEA0028F889 /* LottieView.swift in Sources */,
-				A4D06DAB29936123008B4328 /* HeaderView.swift in Sources */,
+				A4D06DAB29936123008B4328 /* citiesSearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

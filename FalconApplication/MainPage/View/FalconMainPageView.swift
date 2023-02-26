@@ -16,6 +16,7 @@ struct FalconMainPageView: View {
     
     @Namespace var animation
     
+//    @FocusState var doneButton : Bool
 
     
     var body: some View {
@@ -25,28 +26,32 @@ struct FalconMainPageView: View {
         GeometryReader { geo in
             ZStack {
 
+                VStack{
                     VStack {
-
+                        
                         segmentView
                         
-                        Text("AL Shubt")
+                        Text("AL Aqareb")
                             .font(.system(size: 18))
                             .foregroundColor(.white)
                             .bold()
-                           .padding(.top)
+                            .padding(.top)
                         
                         Text(viewModel.date)
                             .font(.system(size: 16))
                             .fontWeight(.thin)
                             .foregroundColor(.white.opacity(0.6))
-
-                        Spacer()
-
-                       
+                        
+                        //                    HeaderView(viewModel: viewModel)
+                        
+                        
+                        
+                        
+                        
                     }
                     
                     VStack{
-
+                        
                         if selectedItem == .weather {
                             WeatherCardsView(viewModel: WeatherViewViewModel())
                                 .frame(maxHeight: .infinity)
@@ -55,10 +60,10 @@ struct FalconMainPageView: View {
                             DiscoverCardsView(model: CardsBackModel.Shubt)
                                 .frame(maxHeight: .infinity)
                         }
-                           
+                        
                     }
-
-                 
+                    
+                }
                  
 
                 }

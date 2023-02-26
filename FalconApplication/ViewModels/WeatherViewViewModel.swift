@@ -13,8 +13,9 @@ final class WeatherViewViewModel: ObservableObject{
  
     
     @Published var weather = WeatherResponse.empty()
-
+    @Published var didFound: Bool = true
     @Published var city : String = "Riyadh" {
+        ///
         didSet {
             getLocation()
         }
@@ -109,9 +110,14 @@ final class WeatherViewViewModel: ObservableObject{
     private func getLocation(){
         CLGeocoder().geocodeAddressString(city) { (placemarks , error) in
             if let places = placemarks, let place = places.first{
+                self.didFound = true
+
                 self.getWeather(coord: place.location?.coordinate)
                 
                    
+            } else {
+                self.didFound = false
+
             }
         }
     }
@@ -123,7 +129,9 @@ final class WeatherViewViewModel: ObservableObject{
         if let coord = coord {
             let urlString = API.getURLFor(lat: coord.latitude, lon: coord.longitude)
             getWeatherInternal(city: city, for: urlString)
+            
         } else{
+            self.didFound = false
             let urlString = API.getURLFor(lat: 25.249359, lon: 45.261669)
             getWeatherInternal(city: city, for: urlString)
         }
@@ -139,12 +147,15 @@ final class WeatherViewViewModel: ObservableObject{
             case .success(let response):
                 // Loading completed
                 DispatchQueue.main.async {
-                    
+                    self.didFound = true
+
                     self.weather = response
                 }
             case .failure(let err) :
                 // Loading failed
                 print(err)
+                self.didFound = false
+
             }
             
         }
