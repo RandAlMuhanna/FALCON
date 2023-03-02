@@ -1,0 +1,102 @@
+/* 
+  Localizable.strings
+  FalconApplication
+
+  Created by Rand AlMuhanna on 10/08/1444 AH.
+  
+*/
+
+//Scroll View
+"Weather" = "الطقس" ;
+"Seasons" = "المواسم" ;
+
+//Search bar
+"Search for a city" = "ابحث عن مدينة" ;
+
+//Seasons name
+"AL Murba’aniah" = "المربعانية" ;
+"AL Shubt" = "الشبط" ;
+"AL Aqareb" =  "العقارب" ;
+"AL Hamemeen" = "الحميمين" ;
+"AL Thera’aien" = "الذراعين" ;
+"AL-Thuraya" = "الثريا" ;
+"AL-Tuwaiba’a" =  "التويبع" ;
+"AL-Jawzaa" =  "الجوزاء" ;
+"AL-Marzam" =  "المرزم" ;
+"AL-Khoulaibeen" =  "الكليبين" ;
+"Suhail" = "سهيل" ;
+"AL-Wasem" = "الوسم" ;
+
+// Seasons Duration
+"(December 7th - January 14th)" = "٧ ديسمبر -  ١٤ يناير";
+"(January 15th - February 9th)" = " ١٥ يناير - ٩ فبراير";
+"(February 10th - March 20th)" =  "١٠ فبراير - ٢٠ مارس";
+"(March 21st - April 15th)" = "٢١ مارس - ١٥ أبريل" ;
+"(April 16th - May 11th)" = "١٦ أبريل - ١١ مايو" ;
+"(May 12th - June 19th)" = "١٢ مايو - ١٩ يونيو" ;
+"(June 20 - July 2nd)" = "٢٠ يونيو - ٢ يوليو" ;
+"(July 3rd - July 28)" = "٣ يوليو - ٢٨ يوليو" ;
+"(July 29th - August 10th)" = " ٢٩ يوليو - ١٠ اغسطس" ;
+"(August 11th - August 23rd)" = "١١ اغسطس - ٢٣ اغسطس" ;
+"(August 24th - October 15th)" = "٢٤ أغسطس - ١٥ أكتوبر" ;
+"(October 16th - December 6th)" = "١٦ أكتوبر - ٦ ديسمبر" ;
+
+
+// Seasons Temperature
+
+"• At the beginning of Almurbaaniah It gets cold." = "• يشتد البرد في أوله " ;
+
+"• It gets colder and fog forms in the morning." = "• يشتد البرد فيه ويتكوّن الضباب في النهار " ;
+
+"• End of winter, winds are strong and the rains are frequent." = " • نهاية الشتاء ، تشتد فيه الرياح و تكثر الأمطار " ;
+
+"• It's getting warmer, the trees are greener, and insects are out from their lairs." =
+"• يزداد الدفء ، تخضر الأشجار وتخرج الحشرات من مخابئها " ;
+
+"• The weather is mild at night and tends to be hot at noon." = "• يعتدل الجو في الليل ويميل للحرارة في الظهيرة " ;
+
+"• The weather tends to be hot." = "• يميل الجو إلى الحرارة" ;
+
+"• It has the longest day and the shortest night." = "• أطول نهار بين أيام السنة، وأقصر ساعات في الليل "  ;
+
+"• The heat increase and the toxins and sandstorms abound." = "• يشتد الحر وتكثر السموم والعواصف الرملية " ;
+
+"• The heat increase and the toxins and sandstorms abound." = "• يشتد الحر وتكثر السموم والعواصف الرملية " ;
+
+"• Nice weather in the evening." = "• يكون الجو لطيف في المساء" ;
+
+"• The night is getting colder and it is still hot during the day." =  "• الجو حار نهاراً ، معتدل ليلاً" ;
+
+"• The weather is mild during the day and cool at night." = "• الجو معتدل نهاراً ، بارد ليلاً "  ;
+
+
+// Season Griculture
+
+"• Wheat and barley are grown in the north of the kingdom." = "• يزرع القمح والشعير في شمال المملكة" ;
+
+"• Nothing is planted in it due to its coldness." = "• لايزرع فيه شيء لشدة برودته" ;
+
+"• Peach, pomegranate, apricot and almond leaves" = "• يورق فيه الخوخ والرمان والمشمش واللوز" ;
+
+"• Rice is grown and wheat is harvested."  = "• يزرع فيه الأرز ويحصد القمح" ;
+
+"• It is advisable to pollinate palm trees." = "• يستحسن فيه تلقيح النخيل" ;
+"• Corn and peanuts are grown in it" = "• تزرع فيه الذرة و الفول السوداني" ;
+"• Zucchini, parsley, and watercress are grown in it." = "• يزرع فيه الكوسة والبقدونس والجرجير" ;
+"• Pumpkins, zucchini and cucumbers are grown in it" = "• يزرع فيه القرع والكوسة والخيار" ;
+"• There are plenty of dates and summer fruits." = "• يكثر فيه الرطب والفواكة الصيفية" ;
+"• Fall planting begins." = "• تبدأ الزراعة الخريفية المبكرة" ;
+"• Winter vegetables are sown" = "• تزرع الخضروات الشتوية" ;
+"• Truffles and wild herbs are grown." = "• ينبت الفقع والنفل والأعشاب البرية" ;
+
+
+
+// Conditions
+
+"Wind" = "الرياح" ;
+"Rain" = "المطر" ;
+"Humidity" = "الرطوبة" ;
+"Feels Like" = "تشعر به" ;
+
+
+

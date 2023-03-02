@@ -27,7 +27,7 @@ struct citiesSearch: View {
                
                 
                 TextField("Search for a city", text: $searchFor)
-                    .keyboardType(.alphabet)
+                    .keyboardType(.default)
                 
                 // Take action directly when user click ENTER
                     .onSubmit {

@@ -13,10 +13,10 @@ struct CityNameView: View {
     
     var body: some View {
         HStack{
-            VStack(alignment: .center, spacing: 10){
+            VStack(alignment: .center){
                 Text(city)
                 
-                                           .font(.system(size: 36))
+                                           .font(.system(size: 32))
                                            .fontWeight(.regular)
                                            .foregroundColor(.white)
                 

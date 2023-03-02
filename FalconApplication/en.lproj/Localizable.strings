@@ -1,0 +1,106 @@
+/* 
+ Localizable.strings
+ FalconApplication
+ 
+ Created by Rand AlMuhanna on 10/08/1444 AH.
+ 
+ */
+
+
+//Scroll View 
+"Weather" = "Weather" ;
+"Seasons" = "Seasons" ;
+
+//Search bar
+"Search for a city" = "Search for a city" ;
+
+//Seasons name
+"AL Murba’aniah" = "AL Murba’aniah" ;
+"AL Shubt" = "AL Shubt" ;
+"AL Aqareb" =  "AL Aqareb" ;
+"AL Hamemeen" = "AL Hamemeen" ;
+"AL Thera’aien" = "AL Thera’aien" ;
+"AL-Thuraya" = "AL-Thuraya" ;
+"AL-Tuwaiba’a" =  "AL-Tuwaiba’a" ;
+"AL-Jawzaa" =  "AL-Jawzaa" ;
+"AL-Marzam" =  "AL-Marzam" ;
+"AL-Khoulaibeen" =  "AL-Khoulaibeen" ;
+"Suhail" = "Suhail" ;
+"AL-Wasem" = "AL-Wasem" ;
+
+
+// Seasons Duration
+"(December 7th - January 14th)" = "(December 7th - January 14th)" ;
+"(January 15th - February 9th)" = "(January 15th - February 9th)" ;
+"(February 10th - March 20th)" = "(February 10th - March 20th)" ;
+"(March 21st - April 15th)" = "(March 21st - April 15th)" ;
+"(April 16th - May 11th)" = "(April 16th - May 11th)" ;
+"(May 12th - June 19th)" = "(May 12th - June 19th)" ;
+"(June 20 - July 2nd)" = "(June 20 - July 2nd)" ;
+"(July 3rd - July 28)" = "(July 3rd - July 28)" ;
+"(July 29th - August 10th)" = "(July 29th - August 10th)" ;
+"(August 11th - August 23rd)" = "(August 11th - August 23rd)" ;
+"(August 24th - October 15th)" = "(August 24th - October 15th)" ;
+"(October 16th - December 6th)" = "(October 16th - December 6th)" ;
+
+// Seasons Temperature
+
+"• At the beginning of Almurbaaniah It gets cold." = "• At the beginning of Almurbaaniah It gets cold." ;
+
+"• It gets colder and fog forms in the morning." = "• It gets colder and fog forms in the morning." ;
+
+"• End of winter, winds are strong and the rains are frequent." = "• End of winter, winds are strong and the rains are frequent." ;
+
+"• It's getting warmer, the trees are greener, and insects are out from their lairs." = "• It's getting warmer, the trees are greener, and insects are out from their lairs." ;
+
+"• The weather is mild at night and tends to be hot at noon." = "• The weather is mild at night and tends to be hot at noon." ;
+
+"• The weather tends to be hot." = "• The weather tends to be hot." ;
+
+"• It has the longest day and the shortest night." = "• It has the longest day and the shortest night." ;
+
+"• The heat increase and the toxins and sandstorms abound." = "• The heat increase and the toxins and sandstorms abound." ;
+
+"• The heat increase and the toxins and sandstorms abound." = "• The heat increase and the toxins and sandstorms abound." ;
+
+"• Nice weather in the evening." = "• Nice weather in the evening." ;
+
+"• The night is getting colder and it is still hot during the day." = "• The night is getting colder and it is still hot during the day." ;
+
+"• The weather is mild during the day and cool at night." = "• The weather is mild during the day and cool at night." ;
+
+
+
+// Season Griculture
+
+"• Wheat and barley are grown in the north of the kingdom." = "• Wheat and barley are grown in the north of the kingdom." ;
+"• Nothing is planted in it due to its coldness." = "• Nothing is planted in it due to its coldness." ;
+
+"• Peach, pomegranate, apricot and almond leaves" = "• Peach, pomegranate, apricot and almond leaves" ;
+"• Rice is grown and wheat is harvested." = "• Rice is grown and wheat is harvested." ;
+
+"• It is advisable to pollinate palm trees." = "• It is advisable to pollinate palm trees." ;
+
+"• Corn and peanuts are grown in it" = "• Corn and peanuts are grown in it" ;
+
+"• Zucchini, parsley, and watercress are grown in it." ="• Zucchini, parsley, and watercress are grown in it." ;
+
+"• Pumpkins, zucchini and cucumbers are grown in it" = "• Pumpkins, zucchini and cucumbers are grown in it" ;
+
+"• There are plenty of dates and summer fruits." = "• There are plenty of dates and summer fruits." ;
+
+"• Fall planting begins." = "• Fall planting begins." ;
+
+
+"• Winter vegetables are sown" = "• Winter vegetables are sown" ;
+
+"• Truffles and wild herbs are grown." = "• Truffles and wild herbs are grown" ;
+
+
+// Conditions
+
+"Wind" = "Wind" ;
+"Rain" = "Rain" ;
+"Humidity" = "Humidity" ;
+"Feels Like" = "Feels Like" ;
+

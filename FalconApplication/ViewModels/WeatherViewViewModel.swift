@@ -108,6 +108,9 @@ final class WeatherViewViewModel: ObservableObject{
     
     
     private func getLocation(){
+//         let locationManager = CLLocationManager()
+//        locationManager.requestLocation()
+
         CLGeocoder().geocodeAddressString(city) { (placemarks , error) in
             if let places = placemarks, let place = places.first{
                 self.didFound = true

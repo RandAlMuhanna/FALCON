@@ -14,13 +14,18 @@ enum FalconScrollerViewModel :Int , CaseIterable{
     
     
     var type : String{
-        switch self {
-        case .weather: return "Weather"
-        case .seasons: return "Seasons"
-
-            
-        }
         
+        get {
+            switch(self) {
+            case .weather:
+                return LocalizableStrings.weatherLang
+                
+            case .seasons:
+                return LocalizableStrings.seasonsLang
+                
+                
+            }
+        }
         
     }
 }

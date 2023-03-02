@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+
+struct Localizable {
+    
+    static let feelslikeLang = NSLocalizedString("Feels Like", comment: "")
+    static let humidityLang = NSLocalizedString("Humidity", comment: "")
+    static let rainLang = NSLocalizedString("Rain", comment: "")
+    static let windLang = NSLocalizedString("Wind", comment: "")
+    
+}
 struct TodayWeatherView: View {
     
     @ObservedObject var viewModel : WeatherViewViewModel
@@ -14,14 +23,14 @@ struct TodayWeatherView: View {
     
     var body: some View {
         
-        VStack(alignment: .center , spacing:8){
+        VStack(alignment: .center ){
             
 
             CityNameView(city: viewModel.city)
-                .padding(.top)
+               .padding(.top , 8)
 
             Text("\(viewModel.temperature)°")
-                .font(.system(size: 60))
+                .font(.system(size: 55))
                 .fontWeight(.thin)
             
             
@@ -31,13 +40,13 @@ struct TodayWeatherView: View {
                
             HStack{
 
-                    widgetView(image: "wind", title: "Wind", value: "\(viewModel.windSpeed)m/s")
+                widgetView(image: "wind", title: Localizable.windLang, value: "\(viewModel.windSpeed)m/s")
 //                Spacer()
-                widgetView(image: "cloud.rain", title: "Rain", value: "\(viewModel.rainChance)%")
+                widgetView(image: "cloud.rain", title:Localizable.rainLang, value: "\(viewModel.rainChance)%")
 //                Spacer()
 
-                widgetView(image: "humidity", title: "Humidity", value: "\(viewModel.humidity)")
-                widgetView(image: "thermometer.low", title: "Feels Like", value: "\(viewModel.feelsLike)°")
+                widgetView(image: "humidity", title: Localizable.humidityLang, value: "\(viewModel.humidity)")
+                widgetView(image: "thermometer.low", title: Localizable.feelslikeLang, value: "\(viewModel.feelsLike)°")
 
 
             }
@@ -70,6 +79,7 @@ struct TodayWeatherView: View {
                     Text(value)
                         .font(.caption)
                         .bold()
+                        
                 }
 
             }.frame(width: 60, height: 120)

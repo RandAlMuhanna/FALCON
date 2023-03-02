@@ -30,11 +30,23 @@ struct CityView: View {
 //            .preferredColorScheme(.light)
     }
     
+//    func sharedScreen(info : String){
+//        let infoU = info
+//        let av = UIActivityViewController(activityItems: [infoU], applicationActivities: nil)
+//        UIApplication.shared.windows.first?.rootViewController?.present(av ,animated: true,completion: nil)
+//        if UIDevice.current.userInterfaceIdiom ==.pad{
+//            av.popoverPresentationController?.sourceView = UIApplication.shared.windows.first
+//            av.popoverPresentationController?.sourceRect = CGRect(x:UIScreen.main.bounds.width/2.1,y: UIScreen.main.bounds.height/ 1.3,width:200,height: 200)
+//        }
+//
+//
+//    }
+    
 }
 
 struct CityView_Previews: PreviewProvider {
     static var previews: some View {
-        FalconMainPageView()
+        CityView(viewModel: WeatherViewViewModel())
     }
 }
 

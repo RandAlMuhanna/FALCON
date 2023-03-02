@@ -20,7 +20,7 @@ enum CardsBackModel: String , CaseIterable {
     case Tuwaibaa
     case Jawzaa
     case Marzam
-    case Koulaibeen
+    case Khoulaibeen
     case Suhail
     case Wasem
 
@@ -32,76 +32,132 @@ enum CardsBackModel: String , CaseIterable {
     
     var seasonName: String {
         
-        switch self {
-        case .Murbaaniah: return "AL Murba’aniah"
-        case .Shubt : return "AL Shubt"
-        case .Aqareb: return "AL Aqareb"
-        case .Hamemeen: return "AL Hamemeen"
-        case .Theraaien: return "AL Thera’aien"
-        case .Thuraya: return "AL-Thuraya"
-        case .Tuwaibaa: return "AL-Tuwaiba’a"
-        case .Jawzaa: return "AL-Jawzaa"
-        case .Marzam: return "AL-Marzam"
-        case .Koulaibeen: return "AL-Koulaibeen"
-        case .Suhail: return "Suhail"
-        case .Wasem: return "AL-Wasem"
+        get {
+            switch(self) {
+                
+            case .Murbaaniah:
+                return LocalizableStrings.murbaaniahLang
+            case .Shubt :
+                return LocalizableStrings.shubtLang
+            case .Aqareb:
+                return LocalizableStrings.aqarebLang
+            case .Hamemeen:
+                return LocalizableStrings.hamemeenLang
+            case .Theraaien:
+                return LocalizableStrings.theraaienLang
+            case .Thuraya:
+                return LocalizableStrings.thurayaLang
+            case .Tuwaibaa:
+                return LocalizableStrings.tuwaibaaLang
+            case .Jawzaa:
+                return LocalizableStrings.jawzaaLang
+            case .Marzam:
+                return LocalizableStrings.marzamLang
+            case .Khoulaibeen:
+                return LocalizableStrings.khoulaibeenLang
+            case .Suhail:
+                return LocalizableStrings.suhailLang
+            case .Wasem:
+                return LocalizableStrings.wasemLang
+                
+            }
+        }
+    }
 
+    var seasonDuration: String {
+        get {
+            switch self {
+            case .Murbaaniah:
+                return LocalizableStrings.murbaaniahDur
+            case .Shubt :
+                return LocalizableStrings.shubtDur
+            case .Aqareb:
+                return LocalizableStrings.aqarebDur
+            case .Hamemeen:
+                return LocalizableStrings.hamemeenDur
+            case .Theraaien:
+                return LocalizableStrings.theraaienDur
+            case .Thuraya:
+                return LocalizableStrings.thurayaDur
+            case .Tuwaibaa:
+                return LocalizableStrings.tuwaibaaDur
+            case .Jawzaa:
+                return LocalizableStrings.jawzaaDur
+            case .Marzam:
+                return LocalizableStrings.marzamDur
+            case .Khoulaibeen:
+                return LocalizableStrings.khoulaibeenDur
+            case .Suhail:
+                return LocalizableStrings.suhailDur
+            case .Wasem:
+                return LocalizableStrings.wasemDur
+
+                
+                
+            }
         }
     }
     
-
-    var seasonDuration: String {
-            switch self {
-            case .Murbaaniah: return "(December 7th - January 14th)"
-            case .Shubt : return "(January 15th - February 9th)"
-            case .Aqareb: return "(February 10th - March 20th)"
-            case .Hamemeen: return "(March 21st - April 15th)"
-            case .Theraaien: return "(April 16th - May 11th)"
-            case .Thuraya: return "(May 12th and - June 19th)"
-            case .Tuwaibaa : return "(June 20 - July 2nd)"
-            case .Jawzaa: return "(July 3rd - July 28)"
-            case .Marzam: return "(July 29th - August 10th)"
-            case .Koulaibeen: return "(August 11th - August 23rd)"
-            case .Suhail: return "(August 24th - October 15th)"
-            case .Wasem: return "(October 16th - December 6th)"
-
-
-            }
-    }
-    
     var seasonTemperature: String {
+        get {
             switch self {
-            case .Murbaaniah: return "• At the beginning of Almurbaaniah It gets cold."
-            case .Shubt : return "• It gets colder and fog forms in the morning."
-            case .Aqareb: return "• End of winter,winds are strong and the rains are frequent."
-            case .Hamemeen: return "• It's getting warmer, the trees are greener, and insects are out from their lairs."
-            case .Theraaien: return "• The weather is mild at night and tends to be hot at noon."
-            case .Thuraya: return "• The weather tends to be hot."
-            case .Tuwaibaa : return "• The weather is very hot during the day."
-            case .Jawzaa : return "• The heat increase and the toxins and sandstorms abound."
-            case .Marzam : return "• The heat increase and the toxins and sandstorms abound."
-            case .Koulaibeen: return "• Nice weather in the evening."
-            case .Suhail: return "• The night is getting colder and it is still hot during the day."
-            case .Wasem: return "• The weather is mild during the day and cool at night."
+            case .Murbaaniah:
+                return LocalizableStrings.murbaaniahTemp
+            case .Shubt :
+                return LocalizableStrings.shubtTemp
+            case .Aqareb:
+                return LocalizableStrings.aqarebTemp
+            case .Hamemeen:
+                return LocalizableStrings.hamemeenTemp
+            case .Theraaien:
+                return LocalizableStrings.theraaienTemp
+            case .Thuraya:
+                return LocalizableStrings.thurayaTemp
+            case .Tuwaibaa :
+                return LocalizableStrings.tuwaibaaTemp
+            case .Jawzaa :
+                return LocalizableStrings.jawzaaTemp
+            case .Marzam :
+                return LocalizableStrings.marzamTemp
+            case .Khoulaibeen:
+                return LocalizableStrings.khoulaibeenTemp
+            case .Suhail:
+                return LocalizableStrings.suhailTemp
+            case .Wasem:
+                return LocalizableStrings.wasemTemp
 
-
+                
+            }
             }
     }
 
     var seasonGriculture: String {
             switch self {
-            case .Murbaaniah: return "• Wheat and barley are grown in the north of the kingdom."
-            case .Shubt : return "• Nothing is planted in it due to its coldness."
-            case .Aqareb: return "• The first three days of it are part of the (seed of the six) to plant all trees and plants."
-            case .Hamemeen: return "• Rice is grown and wheat is harvested."
-            case .Theraaien: return "• It is advisable to pollinate palm trees."
-            case .Thuraya: return "• Corn and peanuts are grown in it"
-            case .Tuwaibaa : return "• Zucchini, parsley and watercress are grown in it."
-            case .Jawzaa: return "• it is good to dive to extract pearls."
-            case .Marzam: return "• There are plenty of dates and summer fruits."
-            case .Koulaibeen: return "• Fall planting begins."
-            case .Suhail: return "• Pomegranates abound and rice is harvested."
-            case .Wasem: return "• Truffles and wild herbs are grown."
+            case .Murbaaniah:
+                return LocalizableStrings.murbaaniahGri
+            case .Shubt :
+                return LocalizableStrings.shubtGri
+            case .Aqareb:
+                return LocalizableStrings.aqarebGri
+            case .Hamemeen:
+                return LocalizableStrings.hamemeenGri
+            case .Theraaien:
+                return LocalizableStrings.theraaienGri
+            case .Thuraya:
+                return LocalizableStrings.thurayaGri
+            case .Tuwaibaa :
+                return LocalizableStrings.tuwaibaaGri
+            case .Jawzaa:
+                return LocalizableStrings.jawzaaGri
+            case .Marzam:
+                return LocalizableStrings.marzamGri
+            case .Khoulaibeen:
+                return LocalizableStrings.khoulaibeenGri
+            case .Suhail:
+                return LocalizableStrings.suhailGri
+            case .Wasem:
+                return LocalizableStrings.wasemGri
+
 
             }
     }
@@ -117,7 +173,7 @@ enum CardsBackModel: String , CaseIterable {
             case .Tuwaibaa: return "Tuwaiba"
             case .Jawzaa: return "Jawzaa"
             case .Marzam: return "Marzam"
-            case .Koulaibeen: return "Koulaibeen"
+            case .Khoulaibeen: return "Koulaibeen"
             case .Suhail: return "Suhail"
             case .Wasem: return "Wasem"
 

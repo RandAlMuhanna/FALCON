@@ -13,6 +13,7 @@
 		A469E82C299A262600A168BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A469E82B299A262600A168BC /* GoogleService-Info.plist */; };
 		A469E82E299A983500A168BC /* Double+Extenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469E82D299A983500A168BC /* Double+Extenstion.swift */; };
 		A469E830299B848F00A168BC /* CardsBackModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469E82F299B848F00A168BC /* CardsBackModel.swift */; };
+		A472910F29B07431004BFBC4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A472911129B07431004BFBC4 /* Localizable.strings */; };
 		A4D06DAB29936123008B4328 /* citiesSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D06DAA29936123008B4328 /* citiesSearch.swift */; };
 		A4D06DAD29936347008B4328 /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D06DAC29936347008B4328 /* CityView.swift */; };
 		A4D06DB629952C56008B4328 /* FalconScrollerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D06DB529952C56008B4328 /* FalconScrollerViewModel.swift */; };
@@ -23,7 +24,7 @@
 		A4DAECDC29A95DB000B2C93D /* seasonsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAECDB29A95DB000B2C93D /* seasonsSearch.swift */; };
 		A4DAECDE29AB085500B2C93D /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DAECDD29AB085500B2C93D /* SplashScreenView.swift */; };
 		A4DD56AA29922E900028F889 /* FalconApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD56A929922E900028F889 /* FalconApplicationApp.swift */; };
-		A4DD56AC29922E900028F889 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD56AB29922E900028F889 /* ContentView.swift */; };
+		A4DD56AC29922E900028F889 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD56AB29922E900028F889 /* ContentView2.swift */; };
 		A4DD56AE29922E920028F889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4DD56AD29922E920028F889 /* Assets.xcassets */; };
 		A4DD56B129922E920028F889 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4DD56B029922E920028F889 /* Preview Assets.xcassets */; };
 		A4DD56BC29922F2B0028F889 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DD56BB29922F2B0028F889 /* API.swift */; };
@@ -66,6 +67,8 @@
 		A469E82B299A262600A168BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../FalconAuthKey+Google/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A469E82D299A983500A168BC /* Double+Extenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extenstion.swift"; sourceTree = "<group>"; };
 		A469E82F299B848F00A168BC /* CardsBackModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsBackModel.swift; sourceTree = "<group>"; };
+		A472911029B07431004BFBC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A472911229B07435004BFBC4 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A4D06DAA29936123008B4328 /* citiesSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = citiesSearch.swift; sourceTree = "<group>"; };
 		A4D06DAC29936347008B4328 /* CityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
 		A4D06DB529952C56008B4328 /* FalconScrollerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconScrollerViewModel.swift; sourceTree = "<group>"; };
@@ -77,7 +80,7 @@
 		A4DAECDD29AB085500B2C93D /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		A4DD56A629922E900028F889 /* FalconApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FalconApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4DD56A929922E900028F889 /* FalconApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconApplicationApp.swift; sourceTree = "<group>"; };
-		A4DD56AB29922E900028F889 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A4DD56AB29922E900028F889 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 		A4DD56AD29922E920028F889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4DD56B029922E920028F889 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4DD56BB29922F2B0028F889 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -208,6 +211,7 @@
 				A4DD56A929922E900028F889 /* FalconApplicationApp.swift */,
 				A4DD56AD29922E920028F889 /* Assets.xcassets */,
 				A4DD56AF29922E920028F889 /* Preview Content */,
+				A472911129B07431004BFBC4 /* Localizable.strings */,
 			);
 			path = FalconApplication;
 			sourceTree = "<group>";
@@ -246,7 +250,7 @@
 		A4DD56B929922EED0028F889 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A4DD56AB29922E900028F889 /* ContentView.swift */,
+				A4DD56AB29922E900028F889 /* ContentView2.swift */,
 				A4DD56D029925AEA0028F889 /* LottieView.swift */,
 				A4DD56FB299299310028F889 /* TodayWeatherView.swift */,
 				A4DD56FD2992A2100028F889 /* DailyWeather.swift */,
@@ -341,6 +345,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = A4DD569D29922E900028F889;
 			packageReferences = (
@@ -374,6 +379,7 @@
 				A4DD56D6299284410028F889 /* dayClearSky.json in Resources */,
 				A4DD56DE299284570028F889 /* dayRain.json in Resources */,
 				A4DD56E6299284740028F889 /* nightMist.json in Resources */,
+				A472910F29B07431004BFBC4 /* Localizable.strings in Resources */,
 				A4DD56E4299284650028F889 /* dayMist.json in Resources */,
 				A4DD56DA2992844D0028F889 /* dayScatteredClouds.json in Resources */,
 				A4DD56D8299284470028F889 /* dayFewClouds.json in Resources */,
@@ -404,7 +410,7 @@
 				A4DD56BE29922F780028F889 /* API+Extensions.swift in Sources */,
 				A4DD56C8299235250028F889 /* WeatherDaily.swift in Sources */,
 				A4DD56FE2992A2100028F889 /* DailyWeather.swift in Sources */,
-				A4DD56AC29922E900028F889 /* ContentView.swift in Sources */,
+				A4DD56AC29922E900028F889 /* ContentView2.swift in Sources */,
 				A469E82E299A983500A168BC /* Double+Extenstion.swift in Sources */,
 				A4D06DBA2995713D008B4328 /* WeatherCardsView.swift in Sources */,
 				A4DD56BC29922F2B0028F889 /* API.swift in Sources */,
@@ -422,6 +428,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A472911129B07431004BFBC4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A472911029B07431004BFBC4 /* en */,
+				A472911229B07435004BFBC4 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A4DD56B229922E920028F889 /* Debug */ = {
@@ -551,6 +569,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FalconApplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Falcon;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -563,9 +582,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Rand.com.FalconApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -582,6 +604,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FalconApplication/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Falcon;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -594,9 +617,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Rand.com.FalconApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -15,12 +15,12 @@ struct WeatherCardsView: View {
     
     
     var body: some View {
-        
-        VStack(spacing:25) {
-            citiesSearch(viewModel: viewModel)
-            
-            if   viewModel.weather.current.temp != 0 {
-                ZStack {
+        ZStack{
+            VStack(spacing:25) {
+                citiesSearch(viewModel: viewModel)
+                
+                if viewModel.weather.current.temp != 0 {
+                    
                     
                     if !tappedCard {
                         
@@ -50,44 +50,62 @@ struct WeatherCardsView: View {
                             
                             
                         }.frame(width: 312.38 , height: 424.99)
-                    } else{
-                        
-                        CityView(viewModel: viewModel)
-                        
+                            .background(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8))
+                    .cornerRadius(20)
+                    
+                    .onTapGesture {
+                        withAnimation {
+                            tappedCard.toggle()
+                        }
                     }
                     
-                }
-                
-                
-                .background(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8))
-                .cornerRadius(20)
-                
-                .onTapGesture {
-                    withAnimation {
-                        tappedCard.toggle()
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    //  .modifier(BlurBackground(showBlur: tappedCard))
+                    .padding(.top , -60)
                     }
-                }
-                
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-              //  .modifier(BlurBackground(showBlur: tappedCard))
-                .padding(.bottom , -10)
-            } else {
+                }else {
                 Spacer()
                 if viewModel.didFound{
                     ProgressView("Loading")
-                                    .scaleEffect(1.5, anchor: .center)
-                                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 12))
-
+                        .scaleEffect(1.5, anchor: .center)
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        .foregroundColor(.white)
+                        .font(.system(size: 12))
+                    
                 } else{
                     Text("Not Found")
                         .foregroundColor(.white)
                 }
             }
-            Spacer()
+                Spacer()
+            }
+                
+            if tappedCard {
+                
+                CityView(viewModel: viewModel)
+                    .padding(.bottom, -30)
+                    .background(Color(red: 0.5647058823529412, green: 0.5803921568627451, blue: 0.8))
+            .cornerRadius(20)
+            
+            .onTapGesture {
+                withAnimation {
+                    tappedCard.toggle()
+                }
+            }
+            
+//            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            //  .modifier(BlurBackground(showBlur: tappedCard))
+     
+                
+            }
+                        
+                    
+                    
+                    
+  
+        
+            
         }
-
     }
 
  

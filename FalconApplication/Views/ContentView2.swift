@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView2: View {
     
 //    @ObservedObject var viewModel = WeatherViewViewModel()
     
@@ -35,7 +35,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView2()
     }
 }
 

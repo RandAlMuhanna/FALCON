@@ -15,7 +15,9 @@ struct FalconApplication: App {
 
 var body: some Scene {
     WindowGroup {
-        FalconMainPageView()
+        SplashScreenView()
+//            .environmentObject(ARViewController.shared)
+
     }
 }
 }
