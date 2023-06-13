@@ -111,7 +111,7 @@ struct FalconMainPageView: View {
                         
                         segmentView
                         
-                        Text("AL Aqareb")
+                        Text("AL Thuraya")
                             .font(.system(size: 18))
                             .foregroundColor(.white)
                             .bold()
